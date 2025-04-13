@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>News Coin - Quanto mais loucura, mais valor.</title>
+  <style>
+    :root {
+      --bg-light: #fdf1dc;
+      --bg-dark: #1a1a1a;
+      --text-light: #1a1a1a;
+      --text-dark: #fdf1dc;
+      --primary: #fff8e7;
+    }
+    body {
+      background-color: var(--bg-light);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      color: var(--text-light);
+      transition: background-color 0.3s, color 0.3s;
+    }
+    body.dark {
+      background-color: var(--bg-dark);
+      color: var(--text-dark);
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+    }
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: inherit;
+      font-weight: bold;
+    }
+    .buy-button, .fake-button, .toggle-mode {
+      background: none;
+      border: 2px solid currentColor;
+      padding: 10px 20px;
+      border-radius: 10px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+    .buy-button:hover, .fake-button:hover, .toggle-mode:hover {
+      transform: scale(1.05);
+    }
+    main {
+      text-align: center;
+      padding: 50px 20px;
+    }
+    main img {
+      width: 150px;
+      animation: float 3s ease-in-out infinite;
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    h1 {
+      font-size: 2.5em;
+      margin: 20px 0 10px;
+    }
+    p {
+      font-size: 1.2em;
+      margin-bottom: 30px;
+    }
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 50px;
+    }
+    .feature-box {
+      width: 300px;
+      margin: 20px;
+      padding: 20px;
+      background-color: var(--primary);
+      border-radius: 15px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    .dark .feature-box {
+      background-color: #333;
+      color: var(--text-dark);
+    }
+    .roadmap, .tokenomics {
+      text-align: left;
+      padding: 30px;
+    }
+    .roadmap h2, .tokenomics h2 {
+      font-size: 2.5em;
+    }
+    .roadmap ul, .tokenomics ul {
+      list-style-type: none;
+      padding-left: 20px;
+    }
+    .roadmap li, .tokenomics li {
+      margin-bottom: 15px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="News Coin Logo" style="height: 50px;">
+    <nav>
+      <a href="#">Home</a>
+      <a href="#roadmap">Roadmap</a>
+      <a href="#tokenomics">Tokenomics</a>
+      <a href="#">Community</a>
+    </nav>
+    <div>
+      <button class="buy-button">Buy $FAKE</button>
+      <button class="toggle-mode" onclick="toggleMode()">Modo Escuro</button>
+    </div>
+  </header>
+  <main>
+    <img src="logo.png" alt="News Coin Mascote">
+    <h1>NEWS COIN</h1>
+    <p>Quanto mais loucura, mais valor.</p>
+    <button class="fake-button">dar uma FAKE</button>
+    <div class="features">
+      <div class="feature-box">
+        <p>Você pode distribuir uma FAKE para premiar quem espalhou a fake news mais criativa.</p>
+      </div>
+      <div class="feature-box">
+        <p>Memes oficiais gerados pela comunidade com base nas notícias da semana.</p>
+      </div>
+      <div class="feature-box">
+        <p>Um oráculo cripto baseado nas previsões da Fox News e CNN (todas erradas, claro).</p>
+      </div>
+    </div>
+  </main>
+  <section id="roadmap" class="roadmap">
+    <h2>Roadmap</h2>
+    <ul>
+      <li>Lançamento do Whitepaper</li>
+      <li>Parcerias com influenciadores</li>
+      <li>Plataforma para criação de memes</li>
+      <li>Desenvolvimento do Oráculo Cripto</li>
+      <li>ICO e Listagem em Exchanges</li>
+    </ul>
+  </section>
+  <section id="tokenomics" class="tokenomics">
+    <h2>Tokenomics</h2>
+    <ul>
+      <li><strong>Nome do Token:</strong> News Coin ($FAKE)</li>
+      <li><strong>Oferta Total:</strong> 1.000.000.000 $FAKE</li>
+      <li><strong>Distribuição:</strong> 40% ICO, 30% parcerias/dev, 20% equipe, 10% marketing.</li>
+    </ul>
+  </section>
+  <script>
+    function toggleMode() {
+      document.body.classList.toggle('dark');
+    }
+  </script>
+</body>
+</html>
